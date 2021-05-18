@@ -7,8 +7,8 @@ int main(){
     int n, t; cin >> n >> t;
     vector<int> top(n), bottom(n);
 
-    for(int &t_i: top) cin >> t_i;
-    for(int &b_i: bottom) cin >> b_i;
+    for(int i=0; i < n; i++) cin >> top[i];
+    for(int i=0; i < n; i++) cin >> bottom[i];
 
     vector<int> prefix_sum(n+10, 0);
 
@@ -26,6 +26,6 @@ int main(){
         if(prefix_sum[i]%2 == 0) cout << top[i] << " ";
         else cout << bottom[i] << " ";
     }
-    
+
     cout << endl;
 }
